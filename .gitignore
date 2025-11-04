@@ -1,0 +1,125 @@
+# First, exclude ALL .tfvars files recursively
+**/*.tfvars
+**/*.tfvars.json
+# =============================================
+# TERRAFORM SPECIFIC IGNORES
+# =============================================
+
+# Local Terraform directories
+**/.terraform/
+**/.terraform.lock.hcl
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash log files
+crash.log
+crash.*.log
+
+# TF plan files
+*.tfplan
+*.plan
+*.hclplan
+
+# Variable files (often contain secrets)
+*.tfvars
+*.tfvars.json
+
+# Override files
+*_override.tf
+*_override.tf.json
+
+# Lock file
+.terraform.lock.hcl
+
+# =============================================
+# SENSITIVE DATA IGNORES
+# =============================================
+
+# SSH keys and certificates
+**/*.pem
+**/*.key
+**/*.pub
+**/*.pkey
+**/*.priv
+**/*.cert
+**/*.crt
+**/*.csr
+
+# Specific key patterns
+id_rsa*
+id_ed25519*
+id_ecdsa*
+id_dsa*
+
+# Secret directories
+**/secrets/
+**/keys/
+**/certificates/
+
+# =============================================
+# ENVIRONMENT & CONFIGURATION IGNORES
+# =============================================
+
+# Environment files
+.env
+.env.*
+.env.local
+.env.production
+.env.development
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# =============================================
+# IDE & EDITOR IGNORES
+# =============================================
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+.idea/
+
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*~
+
+# =============================================
+# OPERATING SYSTEM IGNORES
+# =============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+
+# =============================================
+# LOG FILES
+# =============================================
+*.log
+logs/
+
+
+# Then, whitelist specific files or patterns
+!example.tfvars.example
+!template.tfvars
+!*.tfvars.example
+
+# Or whitelist specific directories
+!examples/**/*.tfvars
+!templates/**/*.tfvars
